@@ -1,0 +1,87 @@
+/*-*- mode: css; -*-*/
+/************************************************
+ * ROFI Color theme (Modern + Anime Palette)
+ * Based on Minimal Dark by George Lemanis
+ * Customized by ChatGPT
+ ************************************************/
+
+* {
+  /* Palette personalizzata */
+  emphasis:      #A295DE;          /* lilla highlight */
+  text:          #dfdfdf;          /* testo principale */
+  text-alt:      #b2b2b2;          /* testo secondario */
+  bg:            #1D0847DD;        /* sfondo blu-viola + trasparenza */
+
+  background-color: transparent;
+  text-color: @text;
+  spacing: 0;
+}
+
+window {
+  transparency: "real";
+  fullscreen: true;
+  background-color: @bg;
+}
+
+mainbox {
+  padding: 25% 28%;
+}
+
+inputbar {
+  margin: 0px 0px 10px 0px;
+  border-radius: 8px;
+  background-color: #A295DE22;  /* inputbar leggero con lilla trasparente */
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+  text-color: @emphasis;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @text-alt;
+}
+
+entry {
+  margin: 0px 5px;
+  text-color: @text;
+  placeholder: "Search…";
+}
+
+listview {
+  border: 0px;
+  spacing: 8px;
+  dynamic: true;
+  scrollbar: false;
+}
+
+element {
+  padding: 10px;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+element-text {
+  highlight: @emphasis;
+}
+
+/* Stati degli elementi */
+element normal {
+  background-color: transparent;
+  text-color: @text;
+}
+
+element selected {
+  background-color: #A295DE55;   /* Lilla più evidente per selezione */
+  text-color: #ffffff;
+}
+
+element urgent {
+  background-color: #5522ff55;
+}
+
+element active {
+  background-color: #ffffff11;
+}
