@@ -1,0 +1,1 @@
+stow -d ~/Projects/My_HyperlandRice/ -t ~/ dotfiles
