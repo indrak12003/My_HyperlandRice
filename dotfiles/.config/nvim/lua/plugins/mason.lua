@@ -14,8 +14,21 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          lua,
-          pyright
+          -- LSP
+          "lua_ls",
+          "pyright",
+          "bashls",
+          "ts_ls",
+          "clangd",
+          "jsonls",
+          "yamlls",
+
+          -- Tools
+          "ruff",
+          "black",
+          "shellcheck",
+          "shfmt",
+          "stylua",
         },
       })
     end,
@@ -29,11 +42,49 @@ return {
 
       local lspconfig = require("lspconfig")
 
-      -- Lua
-      lspconfig.lua_ls.setup({})
+      ------------------------------------
+      -- LUA
+      ------------------------------------
+      lspconfig.lua_ls.setup({
+        settings = {
+          Lua = {
+            diagnostics = { globals = { "vim" } },
+            format = { enable = true },
+          },
+        },
+      })
 
-      -- Python
+      ------------------------------------
+      -- PYTHON
+      ------------------------------------
       lspconfig.pyright.setup({})
+      -- Ruff per linting veloce
+      lspconfig.ruff_lsp.setup({})
+
+      ------------------------------------
+      -- BASH
+      ------------------------------------
+      lspconfig.bashls.setup({})
+
+      ------------------------------------
+      -- TYPESCRIPT / JAVASCRIPT
+      ------------------------------------
+      lspconfig.ts_ls.setup({})
+
+      ------------------------------------
+      -- C / C++
+      ------------------------------------
+      lspconfig.clangd.setup({})
+
+      ------------------------------------
+      -- JSON
+      ------------------------------------
+      lspconfig.jsonls.setup({})
+
+      ------------------------------------
+      -- YAML
+      ------------------------------------
+      lspconfig.yamlls.setup({})
 
     end,
   },
