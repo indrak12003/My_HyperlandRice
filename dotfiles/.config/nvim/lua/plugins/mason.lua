@@ -31,7 +31,8 @@ return {
           "stylua",
         },
       })
-    end,
+    end,setup({})
+
   },
 
   {
@@ -69,7 +70,7 @@ return {
       ------------------------------------
       -- TYPESCRIPT / JAVASCRIPT
       ------------------------------------
-      lspconfig.ts_ls.setup({})
+      lspconfig.typescript-language-server.setup({})
 
       ------------------------------------
       -- C / C++
