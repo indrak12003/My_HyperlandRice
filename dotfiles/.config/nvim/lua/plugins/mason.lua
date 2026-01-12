@@ -9,10 +9,13 @@ return {
 
   {
     "williamboman/mason-lspconfig.nvim",
+    version = "1.24.0",
     lazy = false,
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
+          lua,
+          pyright
         },
       })
     end,
@@ -20,7 +23,7 @@ return {
 
   {
     "neovim/nvim-lspconfig",
-    version = "*",       
+    version = "0.1.7",       
     config = function()
       vim.g.lspconfig = { deprecated = false } -- nasconde il warning
 
@@ -32,8 +35,6 @@ return {
       -- Python
       lspconfig.pyright.setup({})
 
-      -- TypeScript
-      lspconfig.tsserver.setup({})
     end,
   },
 }
