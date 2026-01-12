@@ -21,20 +21,12 @@ return {
           "tsserver",
           "clangd",
           "jsonls",
-          "yamlls",
-
-          -- Tools
-          "ruff",
-          "black",
-          "shellcheck",
-          "shfmt",
-          "stylua",
+          "yamlls"
         },
       })
-    end,setup({})
-
+    end
   },
-
+  
   {
     "neovim/nvim-lspconfig",
     version = "0.1.7",       
