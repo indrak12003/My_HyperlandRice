@@ -24,15 +24,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      -- Usa sempre lspconfig, ma disattiva il warning
+      vim.g.lspconfig = { deprecated = false }
+
       local lspconfig = require("lspconfig")
 
-      -- Lua
       lspconfig.lua_ls.setup({})
-
-      -- Python
       lspconfig.pyright.setup({})
-
-      -- TypeScript / JavaScript
       lspconfig.ts_ls.setup({})
     end,
   },
