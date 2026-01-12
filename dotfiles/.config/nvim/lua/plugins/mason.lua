@@ -70,7 +70,7 @@ return {
       ------------------------------------
       -- TYPESCRIPT / JAVASCRIPT
       ------------------------------------
-      lspconfig.ts_ls.setup({})
+      lspconfig.tsserver.setup({})
 
       ------------------------------------
       -- C / C++
