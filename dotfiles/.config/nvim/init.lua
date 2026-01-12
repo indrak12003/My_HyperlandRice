@@ -6,6 +6,5 @@ vim.cmd("set shiftwidth=2")
 -- Keymaps
 require("config.keymaps")
 
-
 -- Lazy Package Manager (Lazy.nvim)
 require("config.lazy") 
