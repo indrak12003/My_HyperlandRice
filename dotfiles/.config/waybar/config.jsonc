@@ -20,7 +20,6 @@
         "pulseaudio",
         "cpu",
         "battery",
-        "battery#bat2",
         "clock",
         "custom/power"
     ],
