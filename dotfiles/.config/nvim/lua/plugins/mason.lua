@@ -18,7 +18,7 @@ return {
           "lua_ls",
           "pyright",
           "bashls",
-          "ts_ls",
+          "tsserver",
           "clangd",
           "jsonls",
           "yamlls",
