@@ -13,9 +13,6 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "lua_ls",
-          "pyright",
-          "ts_ls",
         },
       })
     end,
@@ -23,15 +20,20 @@ return {
 
   {
     "neovim/nvim-lspconfig",
+    version = "*",       
     config = function()
-      -- Usa sempre lspconfig, ma disattiva il warning
-      vim.g.lspconfig = { deprecated = false }
+      vim.g.lspconfig = { deprecated = false } -- nasconde il warning
 
       local lspconfig = require("lspconfig")
 
+      -- Lua
       lspconfig.lua_ls.setup({})
+
+      -- Python
       lspconfig.pyright.setup({})
-      lspconfig.ts_ls.setup({})
+
+      -- TypeScript
+      lspconfig.tsserver.setup({})
     end,
   },
 }
