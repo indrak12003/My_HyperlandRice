@@ -1,4 +1,4 @@
-return{
+return {
   {
     "williamboman/mason.nvim",
     lazy = false,
@@ -6,6 +6,7 @@ return{
       require("mason").setup()
     end,
   },
+
   {
     "williamboman/mason-lspconfig.nvim",
     lazy = false,
@@ -14,25 +15,25 @@ return{
         ensure_installed = {
           "lua_ls",
           "pyright",
-          "tsserver",
+          "ts_ls", -- nuovo nome
         },
       })
     end,
   },
+
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lspconfig = require("lspconfig")
+      local lsp = vim.lsp.config
 
-      -- esempio: configurazione per lua
-      lspconfig.lua_ls.setup({})
+      -- Lua
+      lsp.lua_ls.setup({})
 
-      -- esempio: Python
-      lspconfig.pyright.setup({})
+      -- Python
+      lsp.pyright.setup({})
 
-      -- esempio: JavaScript / TypeScript
-      lspconfig.tsserver.setup({})
+      -- TypeScript/JavaScript
+      lsp.ts_ls.setup({})
     end,
   },
 }
-
