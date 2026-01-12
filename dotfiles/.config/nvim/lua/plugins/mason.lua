@@ -15,7 +15,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "pyright",
-          "ts_ls", -- nuovo nome
+          "ts_ls",
         },
       })
     end,
@@ -24,16 +24,16 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lsp = vim.lsp.config
+      local lspconfig = require("lspconfig")
 
       -- Lua
-      lsp.lua_ls.setup({})
+      lspconfig.lua_ls.setup({})
 
       -- Python
-      lsp.pyright.setup({})
+      lspconfig.pyright.setup({})
 
-      -- TypeScript/JavaScript
-      lsp.ts_ls.setup({})
+      -- TypeScript / JavaScript
+      lspconfig.ts_ls.setup({})
     end,
   },
 }
