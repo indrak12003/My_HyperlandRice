@@ -17,6 +17,7 @@
         "hyprland/window"
     ],
     "modules-right": [
+        "backlight",
         "pulseaudio",
         "cpu",
         "battery",
