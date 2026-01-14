@@ -1,7 +1,7 @@
 * {
   all: unset;
   font-size: 14px;
-  font-family: "Ubuntu Nerd Font";
+  font-family: "JetBrainsMono Nerd Font";
   transition: 200ms;
 }
 
@@ -140,6 +140,10 @@ trough {
   background-color: #1e1e2e;
   color: #cdd6f4;
   padding: 14px;
+  min-width: 360px;
+  min-height: 600px;
+  max-width: 360px;
+  max-height: 600px;
 }
 
 .control-center .notification-background {
