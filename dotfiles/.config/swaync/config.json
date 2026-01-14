@@ -1,9 +1,20 @@
 {
   "position": "top-right",
-  "layer": "overlay",
   "layer-shell": true,
-  "notifications": {
-    "max-count": 5
-  },
-  "style": "~/.config/swaync/style.css"
+  "layer": "overlay",
+
+  "widgets": [
+    "inhibitors",
+    "notifications"
+  ],
+
+  "widget-config": {
+    "notifications": {
+      "max-visible": 5,
+      "sort": "time"
+    },
+    "inhibitors": {
+      "show-disabled": true
+    }
+  }
 }
