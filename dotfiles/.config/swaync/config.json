@@ -9,7 +9,6 @@
 
   "widgets": [
     "inhibitors",
-    "buttons-grid",
     "notifications"
   ],
 
@@ -28,11 +27,6 @@
         "fullscreen",
         "video",
         "presentation"
-      ]
-    },
-    "buttons-grid": {
-      "actions": [
-        "clear-all"
       ]
     }
   }
