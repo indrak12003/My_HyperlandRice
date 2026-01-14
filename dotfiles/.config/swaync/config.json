@@ -1,0 +1,9 @@
+{
+  "position": "top-right",
+  "layer": "overlay",
+  "layer-shell": true,
+  "notifications": {
+    "max-count": 5
+  },
+  "style": "~/.config/swaync/style.css"
+}
