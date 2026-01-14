@@ -1,20 +1,39 @@
 {
   "position": "top-right",
+  "anchor": "top-right",
   "layer-shell": true,
   "layer": "overlay",
 
+  "control-center-width": 350,
+  "control-center-height": 300,
+
   "widgets": [
     "inhibitors",
+    "buttons-grid",
     "notifications"
   ],
 
   "widget-config": {
     "notifications": {
       "max-visible": 5,
-      "sort": "time"
+      "sort": "time",
+      "group-by-app": true,
+      "expand-on-hover": true,
+      "spacing": 8,
+      "margin": 10
     },
     "inhibitors": {
-      "show-disabled": true
+      "show-disabled": false,
+      "inhibit-when": [
+        "fullscreen",
+        "video",
+        "presentation"
+      ]
+    },
+    "buttons-grid": {
+      "actions": [
+        "clear-all"
+      ]
     }
   }
 }
