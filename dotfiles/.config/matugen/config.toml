@@ -1,0 +1,7 @@
+[config]
+# ...
+
+[templates.hyprland]
+input_path = '~/Projects/My_HyperlandRice/dotfiles/.config/matugen/template/hyperland-color.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'

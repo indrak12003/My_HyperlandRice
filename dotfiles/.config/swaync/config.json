@@ -57,7 +57,7 @@
       "actions": [
         {
           "label": "",
-          "command": "nm-connection-editor",
+          "command": "nmtui",
           "tooltip": "Network"
         },
         { 

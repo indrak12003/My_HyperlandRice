@@ -164,15 +164,15 @@ scale trough {
 scale trough progress {
   min-height: 12px;
   border-radius: 6px;
-  background-color: @accent_color;
+  background-color: #1D0847DD;
   transition: background-color 0.15s ease;
 }
 scale:hover trough progress {
-  background-color: @accent_color;
+  background-color: #1D0847DD;
 }
 trough highlight {
   padding: 5px;
-  background: @accent_color;
+  background: #A295DE;
   border-radius: 20px;
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
   transition: all 0.7s ease;
